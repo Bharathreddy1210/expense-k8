@@ -119,17 +119,17 @@ spec:
       - name: frontend
         image: joindevops/frontned:v1.0
         volumeMounts:
-        - name: nginx.conf
+        - name: nginx-conf
           mountPath: /etc/nginx/nginx.conf
-          subPath: nginx.conf
+          subPath: nginx-conf
           readOnly: true
       volumes:
       - name: nginx.conf
         configMap:
           name: frontend
           items:
-          - key: nginx.conf
-            path: nginx.conf
+          - key: nginx-conf
+            path: nginx-conf
 
 ---
 apiVersion: v1
