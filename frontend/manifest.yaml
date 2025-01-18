@@ -7,7 +7,7 @@
 #   DB_HOST: m
 ---
 apiVersion: apps/v1
-kind: Pod
+kind: Deployment
 metadata:
   name: frontend
   labels:
